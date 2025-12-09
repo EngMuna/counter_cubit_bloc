@@ -3,7 +3,7 @@ import 'package:counter_cubit_bloc/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'my_home_page.dart';
+import 'cubit/my_home_page_cubit.dart';
 
 void main() {
   runApp(MultiBlocProvider(
