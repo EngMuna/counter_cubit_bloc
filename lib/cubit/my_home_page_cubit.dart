@@ -43,6 +43,7 @@ class MyHomePage extends StatelessWidget {
             const Text('You have pushed the button this many times:'),
             BlocBuilder<CounterCubit, CounterState>(
               builder: (context, state) {
+                print("${state.count}");
                 return Text(
                   state.count.toString(),
                   style: Theme

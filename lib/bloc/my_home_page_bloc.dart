@@ -26,6 +26,7 @@ class MyHomePageBloc extends StatelessWidget {
             const Text('You have pushed the button this many times:'),
             BlocBuilder<MyCounterBloc, MyCounterState>(
               builder: (context, state) {
+                print("${state.count1}");
                 return Text(
                   state.count1.toString(),
                   style: Theme.of(context).textTheme.headlineMedium,
