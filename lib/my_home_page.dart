@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'counter_cubit.dart';
+import 'bloc/my_home_page_bloc.dart';
+import 'cubit/counter_cubit.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
@@ -19,7 +20,19 @@ class MyHomePage extends StatelessWidget {
             .of(context)
             .colorScheme
             .inversePrimary,
-        title: Text(title),
+        title: Text("$title cubit"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => MyHomePageBloc(title: 'New Page'),
+                ),
+              );
+            },
+            icon: Icon(Icons.arrow_forward_ios_rounded),
+          ),
+        ],
       ),
       body: Center(
 
